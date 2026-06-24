@@ -1,0 +1,11 @@
+build/
+*.o
+*.out
+*.ncu-rep
+*.nsys-rep
+*.qdrep
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+benchmarks/results/*.csv
+!benchmarks/results/.gitkeep
