@@ -16,13 +16,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # ---------------------------------------------------------------------------
-# Targets are added phase by phase. Nothing is implemented yet - this file
-# only proves the toolchain (CXX + CUDA) is wired up correctly on whatever
-# Colab session you're in. Uncomment / add executables as each phase lands.
+# Targets are added phase by phase. Phase 1 is now wired up with the CPU
+# baseline executables; later CUDA kernels will be added as each phase lands.
 # ---------------------------------------------------------------------------
 
-# Phase 1 example (uncomment once cpu/gemm_cpu.cpp exists):
-# add_executable(gemm_cpu_baseline cpu/gemm_cpu.cpp benchmarks/benchmark_gemm.cpp)
+add_executable(gemm_cpu_baseline
+	benchmarks/benchmark_gemm.cpp
+	cpu/gemm_cpu.cpp)
+
+add_executable(softmax_cpu_baseline
+	benchmarks/benchmark_softmax.cpp
+	cpu/softmax_cpu.cpp)
 
 # Phase 2 example (uncomment once kernels/gemm/gemm_naive.cu exists):
 # add_executable(gemm_naive kernels/gemm/gemm_naive.cu kernels/gemm/gemm_launcher.cpp)
