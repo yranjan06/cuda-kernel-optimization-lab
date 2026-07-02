@@ -348,7 +348,7 @@ comparisons across sessions trustworthy instead of assumed.
 | Phase | Status |
 |---|---|
 | 0. Environment validation (`env_check.sh`) | ✅ Done (Session 1, 2026-06-24) — Tier 1/2/3 all confirmed live |
-| 1. Scaffolding + CPU baselines | ⬜ Not started |
+| 1. Scaffolding + CPU baselines | ✅ Complete — tensor utils, benchmark utils, gemm_cpu, softmax_cpu, both benchmark drivers |
 | 2. Naive CUDA GEMM | ⬜ Not started |
 | 3. Tiled CUDA GEMM | ⬜ Not started |
 | 4. Optimized CUDA GEMM | ⬜ Not started |
